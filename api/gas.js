@@ -10,7 +10,7 @@ function json(res, status, body, cache) {
 function queryOf(req) {
   if (req.query && typeof req.query === 'object' && Object.keys(req.query).length) return req.query;
   try {
-    return Object.fromEntries(new URL(req.url, 'http://localhost').searchParams);
+    return Object.fromEntries(new URL(req.url, 'https://script.google.com/macros/s/AKfycbyJWI92-lZLeU8roefKK5NDoguHOkOX3Fmka8-YerXsXAfgIOm68ZMZQSV6ZVlFTbqN/exec?action=ping&token=f0cd9bcc-8c71-4c1d-97e8-af4f355bd2cd').searchParams);
   } catch {
     return {};
   }
