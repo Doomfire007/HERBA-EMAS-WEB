@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEW Supply Chain Portal - PT Herba Emas Wahidatama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<aside id="side" class="side">
+  <div class="brand"><span class="logo">&#10086;</span><div><b>HEW Supply Chain</b><small>Enterprise Operations v4.2</small></div></div>
+  <nav>
+    <p class="grp">Analitik</p>
+    <a href="#/dashboard" data-r="dashboard">Dashboard Supply Chain</a>
+    <a href="#/service-level" data-r="service-level">Service Level HEW to HNI</a>
+    <p class="grp">PPIC Hub</p>
+    <a href="#/wps-primer" data-r="wps-primer">WPS Pengolahan &amp; Primer</a>
+    <a href="#/wps-sekunder" data-r="wps-sekunder">WPS Sekunder</a>
+  </nav>
+  <div class="user"><span class="av">MS</span><div><b>Muhammad Subehi</b><small>Supervisor &bull; PPIC</small></div></div>
+</aside>
+<div class="main">
+  <header class="top">
+    <button id="menu" class="btn ghost only-m" aria-label="Menu">&#9776;</button>
+    <b class="co">PT Herba Emas Wahidatama</b>
+    <span class="chip teal">Purbalingga Plant 01</span>
+    <span id="sync" class="chip">Menghubungkan&hellip;</span>
+    <span class="grow"></span>
+    <span id="today" class="muted"></span>
+  </header>
+  <main id="view" class="view"></main>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

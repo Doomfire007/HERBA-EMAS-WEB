@@ -32,14 +32,20 @@ Alternatif: pakai `clasp` (`clasp create --type sheets`, `clasp push`).
 Data hasil `setup()` hanyalah contoh. **Harga, Kg_per_Pcs, dan seluruh Transaksi_DO adalah data dummy** (harga 0 pada beberapa produk sengaja memicu peringatan di dashboard). Ganti dengan data asli; omset, tonase, SL, dan total dihitung otomatis oleh script.
 
 ## 2. Frontend (GitHub + Vercel)
+Kerangka deploy: `public/` (HTML/CSS/JS) + `api/gas.js` (proxy) + `package.json` (`"type": "module"`). Tidak ada langkah build.
+
 1. Push folder ini ke repo GitHub.
-2. Di Vercel: **Add New Project**, impor repo. Framework "Other", tanpa build command (output `public`, sudah diatur di `vercel.json`).
-3. Tambahkan **Environment Variables**:
+2. Di Vercel: **Add New Project**, impor repo.
+   - Framework Preset: **Other**
+   - Root Directory: `.` (bukan `public`)
+   - Build Command: kosong
+   - Output Directory: `public` (sudah di `vercel.json`)
+3. Tambahkan **Environment Variables** (Production + Preview):
    - `GAS_URL` = URL web app Apps Script (`.../exec`)
    - `API_TOKEN` = nilai API_TOKEN dari langkah 1.4
 4. Deploy. Token dan URL hanya ada di server (`api/gas.js`), tidak masuk ke browser.
 
-Lokal: `npm i -g vercel && vercel dev` (butuh env yang sama).
+Lokal: salin `.env.example` ke `.env.local`, isi nilainya, lalu `npx vercel dev`.
 
 ## Catatan
 - Mode Interaktif di WPS: sel jadwal berubah jadi input, setiap perubahan langsung ditulis ke sheet `WPS`.
